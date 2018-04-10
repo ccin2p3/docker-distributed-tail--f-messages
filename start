@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/usr/bin/riemann start &
+/usr/sbin/syslog-ng
+/usr/local/bin/caddy -conf /etc/Caddyfile
+

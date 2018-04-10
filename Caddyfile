@@ -1,0 +1,8 @@
+127.0.0.1:5559 {
+  tls self_signed
+  basicauth / user pass
+  proxy / 127.0.0.1:5556 {
+    websocket
+  }
+  log /dev/stdout
+}
