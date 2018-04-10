@@ -17,8 +17,18 @@ docker run -p 55556:5556 -p 55559:5559 -p 5514:514/udp -it <image>
 
 ### Subscribe to websocket
 
+#### wscat
+
 ```
+npm install wscat
 wscat --connect 'ws://127.0.0.1:55556/index?subscribe=true&query=true'
+```
+
+#### wsdump.py
+
+```
+pip install websocket-client
+wsdump -r 'ws://127.0.0.1:55556/index?subscribe=true&query=true'
 ```
 
 ### Send syslog message to container
